@@ -1,0 +1,75 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-background text-body font-outfit antialiased overflow-x-hidden selection:bg-primary/30;
+  }
+
+  /* Sophisticated Grain Texture */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 50;
+    filter: contrast(150%) brightness(100%);
+    mix-blend-mode: overlay;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply text-heading font-black tracking-tighter leading-[1.1];
+  }
+
+  p {
+    @apply font-light leading-relaxed tracking-wide;
+  }
+
+  /* Custom Scrollbar - Minimal & Elegant */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-white/10 rounded-full hover:bg-primary/50 transition-all;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/[0.03] backdrop-blur-2xl border border-white/10 shadow-glass;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+  }
+
+  .premium-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-white via-white to-white/30;
+  }
+
+  .mask-reveal {
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  }
+
+  .outline-text {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+    color: transparent;
+  }
+
+  .tracking-tightest {
+    letter-spacing: -0.05em;
+  }
+}
