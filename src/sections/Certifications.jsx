@@ -8,7 +8,7 @@ const certifications = [
         date: "2026",
         status: "earned",
         badgeUrl: "https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png",
-        verifyUrl: "https://www.credly.com/badges/your-badge-id", // ← replace with your Credly link
+        verifyUrl: "https://www.credly.com/badges/752455d5-7a29-49ec-8efa-b18e154decf3/public_url",
         description: "Validates foundational understanding of AWS Cloud services, core infrastructure, billing, security, and cloud architecture concepts.",
     },
     {
@@ -18,7 +18,7 @@ const certifications = [
         date: "2025",
         status: "earned",
         badgeUrl: "https://images.credly.com/size/340x340/images/e3541a0c-dd4a-4820-8052-5001006efc85/blob",
-        verifyUrl: "https://www.credly.com/badges/your-academy-badge-id", // ← replace with your Credly link
+        verifyUrl: "https://www.credly.com/badges/0ba4d937-b1d1-4573-92cb-a79d1aa322c5/public_url",
         description: "Awarded upon completion of the AWS Academy Cloud Foundations course — covering core cloud concepts, AWS services, security, architecture, pricing, and support.",
     },
     {
