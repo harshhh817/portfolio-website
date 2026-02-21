@@ -17,7 +17,7 @@ const certifications = [
         issuer: "Amazon Web Services Academy",
         date: "2025",
         status: "earned",
-        badgeUrl: "https://images.credly.com/size/340x340/images/73e4a58b-a8ef-41a3-a7db-9183dd269882/image.png",
+        badgeUrl: "https://images.credly.com/size/340x340/images/e3541a0c-dd4a-4820-8052-5001006efc85/blob",
         verifyUrl: "https://www.credly.com/badges/your-academy-badge-id", // ← replace with your Credly link
         description: "Awarded upon completion of the AWS Academy Cloud Foundations course — covering core cloud concepts, AWS services, security, architecture, pricing, and support.",
     },
