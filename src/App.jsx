@@ -3,7 +3,7 @@ import Hero from "./sections/Hero";
 import CurrentRD from "./sections/CurrentRD";
 import TechnicalCapabilities from "./sections/TechnicalCapabilities";
 import Projects from "./sections/Projects";
-import EducationTrack from "./sections/EducationTrack";
+import Certifications from "./sections/Certifications";
 import Contact from "./sections/Contact";
 import CustomCursor from "./components/CustomCursor";
 
@@ -23,7 +23,7 @@ function App() {
           <CurrentRD />
           <TechnicalCapabilities />
           <Projects />
-          <EducationTrack />
+          <Certifications />
           <Contact />
         </main>
 

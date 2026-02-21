@@ -20,7 +20,7 @@ const training = [
 
 const EducationTrack = () => {
     return (
-        <section id="credentials" className="py-40 px-6 md:px-12 relative overflow-hidden bg-background">
+        <section id="education" className="py-40 px-6 md:px-12 relative overflow-hidden bg-background">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-24">
                 <div className="lg:w-1/3 lg:sticky lg:top-40 h-fit">
                     <span className="text-[10px] font-black uppercase tracking-[0.5em] text-primary mb-4 block underline underline-offset-8">
