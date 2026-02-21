@@ -11,6 +11,15 @@ const certifications = [
         verifyUrl: "https://www.credly.com/badges/your-badge-id", // ← replace with your Credly link
         description: "Validates foundational understanding of AWS Cloud services, core infrastructure, billing, security, and cloud architecture concepts.",
     },
+    {
+        id: "oracle-java",
+        title: "Oracle Java Foundations",
+        issuer: "Oracle",
+        date: "2024",
+        status: "upload",
+        certPdf: "/certificates/oracle-java.pdf",
+        description: "Demonstrates foundational knowledge of Java programming including object-oriented principles, data structures, and core language features.",
+    },
 ];
 
 const Certifications = () => {
@@ -49,7 +58,7 @@ const Certifications = () => {
 
                             <div className="relative z-10 flex flex-col sm:flex-row sm:items-start gap-6">
 
-                                {/* AWS Badge (only for earned certs) */}
+                                {/* AWS Badge (earned certs) */}
                                 {cert.status === "earned" && (
                                     <div className="flex-shrink-0">
                                         <div className="relative w-20 h-20">
@@ -61,6 +70,17 @@ const Certifications = () => {
                                                 whileHover={{ scale: 1.1, rotate: 4 }}
                                                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                                             />
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* Oracle / uploaded cert icon */}
+                                {cert.status === "upload" && (
+                                    <div className="flex-shrink-0">
+                                        <div className="relative w-20 h-20 rounded-2xl bg-[#C74634]/10 border border-[#C74634]/20 flex items-center justify-center group-hover:border-[#C74634]/50 transition-all duration-500">
+                                            <div className="absolute inset-0 bg-[#C74634]/10 rounded-2xl blur-xl scale-75 group-hover:scale-110 transition-transform duration-700" />
+                                            {/* Oracle wordmark O */}
+                                            <span className="relative z-10 text-4xl font-black text-[#C74634] leading-none select-none">O</span>
                                         </div>
                                     </div>
                                 )}
@@ -80,7 +100,7 @@ const Certifications = () => {
                                         {cert.description}
                                     </p>
 
-                                    {/* Verify button — only for earned certs */}
+                                    {/* Verify badge — AWS earned certs */}
                                     {cert.status === "earned" && (
                                         <a
                                             href={cert.verifyUrl}
@@ -93,6 +113,25 @@ const Certifications = () => {
                                                     d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                                             </svg>
                                             <span>Verify Badge</span>
+                                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                            </svg>
+                                        </a>
+                                    )}
+
+                                    {/* View PDF — uploaded certs */}
+                                    {cert.status === "upload" && cert.certPdf && (
+                                        <a
+                                            href={cert.certPdf}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="mt-6 inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#C74634] hover:bg-[#a8392a] text-white font-black text-[10px] uppercase tracking-widest transition-all duration-300 shadow-lg shadow-[#C74634]/25 hover:shadow-[#C74634]/50 hover:scale-105 active:scale-95"
+                                        >
+                                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5}
+                                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                            </svg>
+                                            <span>View Certificate</span>
                                             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                             </svg>
