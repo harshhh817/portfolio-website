@@ -5,11 +5,21 @@ const certifications = [
         id: "aws-ccp",
         title: "AWS Certified Cloud Practitioner",
         issuer: "Amazon Web Services",
-        date: "2024",
+        date: "2026",
         status: "earned",
         badgeUrl: "https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png",
         verifyUrl: "https://www.credly.com/badges/your-badge-id", // ← replace with your Credly link
         description: "Validates foundational understanding of AWS Cloud services, core infrastructure, billing, security, and cloud architecture concepts.",
+    },
+    {
+        id: "aws-academy-cloud",
+        title: "AWS Academy Graduate — Cloud Foundations",
+        issuer: "Amazon Web Services Academy",
+        date: "2025",
+        status: "earned",
+        badgeUrl: "https://images.credly.com/size/340x340/images/73e4a58b-a8ef-41a3-a7db-9183dd269882/image.png",
+        verifyUrl: "https://www.credly.com/badges/your-academy-badge-id", // ← replace with your Credly link
+        description: "Awarded upon completion of the AWS Academy Cloud Foundations course — covering core cloud concepts, AWS services, security, architecture, pricing, and support.",
     },
     {
         id: "oracle-java",
